@@ -33,25 +33,16 @@ while( pariDispari == "" || !isNaN(pariDispari)) {
 // L’utente inserisce anche un numero da 1 a 5.
 let numberUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
 
+while(isNaN(numberUtente)) {
 
-// if(numberUtente != "" && isNaN(numberUtente)) {
-//     alert("attenzione inserisci un numero");
-// }
-
-// if(numberUtente > 5 || numberUtente < 1) {
-//     alert("Attenzione!! inserisci un numero da 1 a 5");
-// }
-
-while(numberUtente != "" && isNaN(numberUtente)) {
     alert("attenzione inserisci un numero");
-
-    if(numberUtente > 5 || numberUtente < 1) {
-        alert("Attenzione!! inserisci un numero da 1 a 5");
-    }
-
     numberUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
 }
 
+while(numberUtente > 5 || numberUtente < 1 ) {
+
+    numberUtente = parseInt(prompt("Attenzione!! Inserisci un numero da 1 a 5"));
+}
 
 // Ho invocato la funzione somma e salvato dentro una variabile
 const sumUtentePc = sumNumber(numberUtente, numeroPc);
@@ -59,16 +50,11 @@ const sumUtentePc = sumNumber(numberUtente, numeroPc);
 console.log(`Il numero del PC è ${numeroPc}`);
 console.log(`Il numero dell'utente è ${numberUtente}`);
 
-// Dichiariamo chi ha vinto. Se l’utente aveva scelto pari e la somma è pari, ha vinto l’utente, altrimenti il computer
+// Dichiariamo chi ha vinto.
+// Se l’utente aveva scelto pari e la somma è pari, ha vinto l’utente, altrimenti il computer
 if(pariDispari === "pari" && sumUtentePc % 2 === 0) { 
     alert("Ha vinto l'utente!!");
 
 }else {
     alert("Ha vinto il PC!!");
 }
-
-// if(pariDispari === "pari" && sumUtentePc) {
-//     alert("ha vinto l'utente!");
-// }else {
-//     alert("ha vinto il PC");
-// }
