@@ -33,11 +33,19 @@ while( pariDispari == "" || !isNaN(pariDispari)) {
 // L’utente inserisce anche un numero da 1 a 5.
 let numberUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
 
-while(numberUtente == "" || isNaN(numberUtente)) {
 
-    alert("attenzione!! inserisci un numero");
+// if(numberUtente != "" && isNaN(numberUtente)) {
+//     alert("attenzione inserisci un numero");
+// }
 
-    if(numberUtente > 5 && numberUtente < 1) {
+// if(numberUtente > 5 || numberUtente < 1) {
+//     alert("Attenzione!! inserisci un numero da 1 a 5");
+// }
+
+while(numberUtente != "" && isNaN(numberUtente)) {
+    alert("attenzione inserisci un numero");
+
+    if(numberUtente > 5 || numberUtente < 1) {
         alert("Attenzione!! inserisci un numero da 1 a 5");
     }
 
